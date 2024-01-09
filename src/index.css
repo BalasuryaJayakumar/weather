@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+button, form, input {
+  font: inherit;
+}
+
+.inputForm label {
+  position: absolute;
+  left: -99999px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +21,201 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(54, 178, 227);
+  background: url(../src/img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: clamp(1rem, 2.2vh, 1.25rem);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.inputForm {
+  width: 75%;
+  margin: 5rem 0;
+}
+
+.inputForm input {
+  width: 65%;
+  padding: 0.5rem;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.inputForm button {
+  width: 35%;
+  padding: 0.5rem;
+  background-color: bisque;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.weatherReport {
+  width: 90%;
+  height: 60vh;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 5px #000;
+  display: grid;
+  place-content: center;
+}
+
+.showValue {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.showValue .image {
+  width: 10rem;
+  height: auto;
+  background-color: transparent;
+}
+
+
+@media screen and (min-width: 480px) {
+  .inputForm {
+    width: 60%;
+  }
+  
+  .inputForm input {
+    width: 70%;
+  }
+  
+  .inputForm button {
+    width: 30%;
+  }
+
+  .weatherReport {
+    width: 80%;
+    height: 60vh;
+  }
+  
+  .showValue {
+    gap: 1.5rem;
+  }
+  
+  .showValue .image {
+    width: 10rem;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  
+  .inputForm input {
+    padding: 0.85rem;
+  }
+  
+  .inputForm button {
+    padding: 0.85rem;
+  }
+  
+  .showValue {
+    gap: 2rem;
+  }
+  
+  .showValue .image {
+    width: 15rem;
+  }
+
+  body {
+    font-size: clamp(1.5rem, 3vh, 1.8rem);
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .inputForm {
+    width: 50%;
+  }
+
+  .weatherReport {
+    width: 75%;
+    padding: 1rem;
+  }
+  
+  .showValue {
+    gap: 2.5rem;
+  }
+  
+  .showValue .image {
+    width: 20rem;
+  }
+
+  body {
+    font-size: clamp(1.65rem, 3.2vh, 1.9rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .inputForm {
+    width: 40%;
+  }
+
+  .weatherReport {
+    width: 65%;
+    height: 60vh;
+    padding: 1rem;
+  }
+  
+  .showValue {
+    gap: 2.5rem;
+  }
+  
+  .showValue .image {
+    width: 25rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .inputForm {
+    width: 35%;
+  }
+  .weatherReport {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .inputForm {
+    width: 30%;
+  }
+
+  .weatherReport {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .inputForm {
+    width: 25%;
+  }
+  .weatherReport {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .inputForm {
+    width: 20%;
+  }
+  .weatherReport {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 3500px) {
+  .inputForm {
+    width: 18%;
+  }
+  .weatherReport {
+    width: 25%;
+  }
 }
